@@ -63,7 +63,7 @@ function App() {
     }
   }, [snakeCoords]);
 
-  function onKeyDown(e) {
+  function onKeyDown(e: KeyboardEvent) {
     if (gameDirection !== GameDirection.UP && e.key === "ArrowUp")
       setGameDirection(GameDirection.UP);
     if (gameDirection !== GameDirection.RIGHT && e.key === "ArrowRight")
