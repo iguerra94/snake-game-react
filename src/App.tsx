@@ -41,10 +41,11 @@ function App() {
   const [gameDirection, setGameDirection] = useState(GameDirection.RIGHT);
 
   useEffect(() => {
-    // intervalId.current = setInterval(moveSnake, snakeSpeed);
-    // return () => {
-    //   clearInterval(intervalId.current);
-    // };
+    intervalId.current = setInterval(moveSnake, snakeSpeed);
+
+    return () => {
+      clearInterval(intervalId.current);
+    };
   });
 
   useEffect(() => {
